@@ -1,6 +1,8 @@
 name: PublishTWBXWorkbook
 on:
-  push: feature1
+  push: 
+    branch:
+      - feature1
   # pull_request:
   #   branches: 
   #     - master
