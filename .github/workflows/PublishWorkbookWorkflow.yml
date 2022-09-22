@@ -10,7 +10,7 @@ env:
 
 jobs:
     build-on-merge:
-    if: startsWith(github.event.head_commit.message, 'Merge pull request')
+      if: startsWith(github.event.head_commit.message, 'Merge pull request')
     runs-on: ubuntu-latest
     outputs:
       changed_files: ${{ steps.get-files.outputs.files }}
