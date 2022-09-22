@@ -12,7 +12,7 @@ env:
 jobs:
     build-on-merge:
       if: ${{ github.event.pull_request.merged }}
-    runs-on: ubuntu-latest
+      runs-on: ubuntu-latest
     outputs:
       changed_files: ${{ steps.get-files.outputs.files }}
 
