@@ -4,6 +4,9 @@ on:
     branches: 
       - master
     types: [closed]
+  push:
+    branches: 
+      - feature1
 env:
   UNAME: ${{secrets.USERNAME}}
   PASS: ${{secrets.PASSWORD}}
