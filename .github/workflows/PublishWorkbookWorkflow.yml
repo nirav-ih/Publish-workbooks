@@ -39,7 +39,7 @@ jobs:
         - name: Publish Workbook
           run: |
             project_id=`jq '.project_id' project-id.json`
-            echo $project_id
+            echo "Projectname:  "$project_id
             echo ${{ steps.get-files.outputs.files }}
             if [ "${{ steps.get-files.outputs.files }}" != '' -a "$project_id" != ''  ];then
                 python3 publish_workbook.py --server_url "${{env.SERVURL}}" --project_id ${project_id} --password ${{env.PASS}} --username ${{env.UNAME}} --workbook_files "${{ steps.get-files.outputs.files }}"
