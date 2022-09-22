@@ -1,7 +1,8 @@
 name: PublishTWBXWorkbook
-on:
-  push:
-    branches: [master]
+on
+  pull_request_review:
+    types:
+      - submitted
 
 env:
   UNAME: ${{secrets.USERNAME}}
