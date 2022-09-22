@@ -4,6 +4,9 @@ on:
   #   branch:
   #     - feature1
   pull_request
+    branches: 
+      - main
+  workflow_dispatch:
 
 env:
   UNAME: ${{secrets.USERNAME}}
