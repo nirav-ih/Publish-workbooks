@@ -1,8 +1,7 @@
 name: PublishTWBXWorkbook
-on
-  pull_request_review:
-    types:
-      - submitted
+on:
+  push:
+    branches: ["master"]
 
 env:
   UNAME: ${{secrets.USERNAME}}
@@ -10,7 +9,8 @@ env:
   SERVURL: ${{secrets.SERVERURL}}
 
 jobs:
-  build:
+    build-on-merge:
+    if: startsWith(github.event.head_commit.message, 'Merge pull request')
     runs-on: ubuntu-latest
     outputs:
       changed_files: ${{ steps.get-files.outputs.files }}
