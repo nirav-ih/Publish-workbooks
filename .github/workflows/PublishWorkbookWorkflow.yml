@@ -3,9 +3,9 @@ on:
    #pull: 
    #  branch:
    #    - master
-  push: 
-    branch: 
-      - feature1
+  pull_request:
+    types:
+      - closed
 env:
   UNAME: ${{secrets.USERNAME}}
   PASS: ${{secrets.PASSWORD}}
