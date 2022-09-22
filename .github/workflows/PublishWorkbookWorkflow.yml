@@ -1,7 +1,7 @@
 name: PublishTWBXWorkbook
 on:
   push:
-    branches: [feature1]
+    branches: [master]
 
 env:
   UNAME: ${{secrets.USERNAME}}
