@@ -4,8 +4,8 @@ on:
   #   branch:
   #     - feature1
   pull_request
-    branch: 
-      - main
+      branch: 
+        - master
   workflow_dispatch:
 
 env:
