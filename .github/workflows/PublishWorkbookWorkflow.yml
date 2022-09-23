@@ -4,8 +4,8 @@ on:
    #  branch:
    #    - master
   pull_request_target:
-    types:
-      - closed
+    branch:
+      - master
 env:
   UNAME: ${{secrets.USERNAME}}
   PASS: ${{secrets.PASSWORD}}
